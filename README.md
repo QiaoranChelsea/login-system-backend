@@ -15,7 +15,7 @@ A log-in system backend built with node.js and MongoDB (Support Sign up, Sign in
    * sign up
      * function: store the user's registration info into the database.
      * _METHOD_: POST
-     * Request URL: 
+     * Request URL: `/account/signup`
      * _post data_ : 
      ```
      {
@@ -29,7 +29,7 @@ A log-in system backend built with node.js and MongoDB (Support Sign up, Sign in
    * sign in
      * function: check if the email and password users entered are consistent with records from database.
      * _METHOD_: POST
-     * _post data_ : 
+     * _post data_ : `/account/signin`
      ```
      {
        "password": "passwordtest",
@@ -45,7 +45,7 @@ A log-in system backend built with node.js and MongoDB (Support Sign up, Sign in
      ```   
    * verify token/session
      * function: veryfy if the token is consistent with record form database and it's not deleted(log out) .
-     * Request URL: http://localhost:8080/account/verify?=<token id>
+     * Request URL: `/account/verify?=<token id>`
      * _METHOD_: GET
      * _server response_(when verify success): 
      ```
@@ -56,7 +56,7 @@ A log-in system backend built with node.js and MongoDB (Support Sign up, Sign in
      ```  
    * Log out
      * function: log out from system
-     * Request URL: http://localhost:8080/account/logout?=<token id>
+     * Request URL: `/account/logout?=<token id>`
      * _METHOD_: GET
      * _server response_(when log out success):
      ```
